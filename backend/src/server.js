@@ -12,6 +12,11 @@ connectDB();
 
 app.use(express.json());
 
+// app.use((req, res, next) => {
+//   console.log(`Request Method: ${req.method}, Request URL: ${req.url}`);
+//   next();
+// });
+
 app.use("/api/notes", notesRouter);
 
 app.listen(PORT, () => {
